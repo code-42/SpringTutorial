@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="init" default-destroy-method="destroy">
 
 
-	<bean id="person" class="net.ed.spring.tutorial.Person"></bean>
+	<bean id="person" class="net.ed.spring.tutorial.Person"
+		scope="prototype">
+	</bean>
+
+	<bean id="address" class="net.ed.spring.tutorial.Address"
+		scope="prototype">
+	</bean>
 </beans>
