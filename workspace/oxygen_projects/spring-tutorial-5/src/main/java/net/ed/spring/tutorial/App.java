@@ -37,6 +37,9 @@ public class App {
 				person2.getAddress().getZipcode() +
 				" and I was created with PoJo constructor");
 		
+		Address address3 = (Address)context.getBean("address3");
+		System.out.println("address3 == " + address3);
+		
 		// Prevents resource leaks
 		((ClassPathXmlApplicationContext)context).close();
 		

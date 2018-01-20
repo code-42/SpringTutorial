@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-init-method="init" default-destroy-method="destroy">
+	default-init-method="init" default-destroy-method="destroy"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
 	<bean id="person1" class="net.ed.spring.tutorial.Person" scope="singleton"
@@ -21,6 +22,8 @@
 	<bean id="address" class="net.ed.spring.tutorial.Address" scope="singleton">
 	</bean>
 	
+		<bean id="address3" class="net.ed.spring.tutorial.Address" scope="singleton">
+	</bean>
 	
 	<bean id="personfactory"
 		class="net.ed.spring.tutorial.PersonFactory">
