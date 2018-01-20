@@ -22,7 +22,7 @@
 	<bean id="address" class="net.ed.spring.tutorial.Address" scope="singleton">
 	</bean>
 	
-		<bean id="address3" class="net.ed.spring.tutorial.Address" scope="singleton">
+		<bean id="address3" class="net.ed.spring.tutorial.Address" scope="singleton" p:street="23 Vibe St" p:zipcode="02901">
 	</bean>
 	
 	<bean id="personfactory"
