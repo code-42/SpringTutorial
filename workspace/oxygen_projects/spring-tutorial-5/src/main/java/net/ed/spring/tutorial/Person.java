@@ -14,6 +14,19 @@ public class Person {
 		this.name = name;
 	}
 	
+	public static Person getInstance(int id, String name) {
+		System.out.println("Creating Person " + name + " " + id + " using factory method");
+		return new Person(id, name);
+	}
+	
+	public void onInit() {
+		System.out.println("Person bean init called by beans.xml \n" + this);
+	}
+	
+	public void onDestroy() {
+		System.out.println("Person bean destroy called by beans.xml \n" + this);
+	}
+	
 	public int getId() {
 		return id;
 	}

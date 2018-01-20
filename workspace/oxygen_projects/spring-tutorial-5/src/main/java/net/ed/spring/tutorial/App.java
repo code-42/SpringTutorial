@@ -12,17 +12,28 @@ public class App {
 		// Change FileSystemXmlApplicationContext to ClassPathXmlApplicationContext
 		ApplicationContext context = new ClassPathXmlApplicationContext("net/ed/spring/tutorial/beans/beans.xml");
 
-		Person person = (Person)context.getBean("person");
-		person.setId(1);
-		person.setName("Ed");
+		Person person1 = (Person)context.getBean("person1");
+		person1.setId(1);
+		person1.setName("Ed1");
 		Address address = new Address();
 		address.setStreet("1 Main St");
 		address.setZipcode("90210");
-		person.setAddress(address);
+		person1.setAddress(address);
+		System.out.println("Hello, my name is " + person1.getName() +
+				" and my address is " + person1.getAddress().getStreet() + " " + 
+				person1.getAddress().getZipcode());
 		
-		System.out.println("Hello, my name is " + person.getName() +
-				" and my address is " + person.getAddress().getStreet() + " " + 
-				person.getAddress().getZipcode());
+		Person person2 = (Person)context.getBean("person2");
+		person2.setId(2);
+		person2.setName("Edd2");
+		Address address2 = new Address();
+		address2.setStreet("2 Main St");
+		address2.setZipcode("90222");
+		person2.setAddress(address2);
+		
+		System.out.println("Hello, my name is " + person2.getName() +
+				" and my address is " + person2.getAddress().getStreet() + " " + 
+				person2.getAddress().getZipcode());
 		
 		// Prevents resource leaks
 		((ClassPathXmlApplicationContext)context).close();

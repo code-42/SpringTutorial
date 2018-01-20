@@ -20,11 +20,11 @@ public class Address {
 	}
 	
 	public void init() {
-		System.out.println("Bean created on init");
+		System.out.println("Address bean created on init()");
 	}
 
 	public void destroy() {
-		System.out.println("Bean destroyed on context.close()");
+		System.out.println("Address bean destroyed on context.close()");
 	}
 	
 	public String getStreet() {

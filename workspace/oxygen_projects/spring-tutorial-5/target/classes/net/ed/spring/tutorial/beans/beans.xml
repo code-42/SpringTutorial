@@ -5,11 +5,24 @@
 	default-init-method="init" default-destroy-method="destroy">
 
 
-	<bean id="person" class="net.ed.spring.tutorial.Person"
-		scope="prototype">
+	<bean id="person1" class="net.ed.spring.tutorial.Person" scope="singleton"
+		factory-method="getInstance">
+		<constructor-arg value="777" name="id"></constructor-arg>
+		<constructor-arg value="Joe" name="name"></constructor-arg>
 	</bean>
 
-	<bean id="address" class="net.ed.spring.tutorial.Address"
-		scope="prototype">
+	<bean id="person2" class="net.ed.spring.tutorial.Person"
+		scope="singleton" factory-method="createPerson"
+		factory-bean="personfactory">
+		<constructor-arg value="222" name="id"></constructor-arg>
+		<constructor-arg name="name" value="Ed2"></constructor-arg>
+	</bean>
+
+	<bean id="address" class="net.ed.spring.tutorial.Address" scope="singleton">
+	</bean>
+	
+	
+	<bean id="personfactory"
+		class="net.ed.spring.tutorial.PersonFactory">
 	</bean>
 </beans>
