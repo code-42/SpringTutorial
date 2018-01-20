@@ -1,0 +1,8 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.ed</groupId>
+  <artifactId>billsburgers</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/t/lecture/3404262?start=0
+Section 8 Lecture 50 Bills Burgers Challenge</description>
+</project>
