@@ -1,11 +1,16 @@
 package billsburgers;
 
+import java.util.ArrayList;
+
 public class Hamburger {
 	
     private String name;
     private String meat;
     private String bread;
     private double price;
+    
+    private AdditionalItem item;
+    protected ArrayList<AdditionalItem> items = new ArrayList<AdditionalItem>();
     
 	public Hamburger() {
 	}
@@ -34,6 +39,10 @@ public class Hamburger {
 		return "Hamburger [name=" + name + ", meat=" + meat + ", bread=" + bread + ", price=" + price + "]";
 	}
     
-    
+    public void addItem(AdditionalItem item){
+        this.item = item;
+        this.items.add(this.item);
+    }
+
 
 }
