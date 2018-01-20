@@ -15,7 +15,7 @@ public class Person {
 	}
 	
 	public static Person getInstance(int id, String name) {
-		System.out.println("Creating Person " + name + " " + id + " using factory method");
+		System.out.println("Bean Creating Person " + name + " " + id + " using factory method");
 		return new Person(id, name);
 	}
 	

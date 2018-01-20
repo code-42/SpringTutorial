@@ -21,7 +21,8 @@ public class App {
 		person1.setAddress(address);
 		System.out.println("Hello, my name is " + person1.getName() +
 				" and my address is " + person1.getAddress().getStreet() + " " + 
-				person1.getAddress().getZipcode());
+				person1.getAddress().getZipcode() +
+				" and I was created with PoJo constructor");
 		
 		Person person2 = (Person)context.getBean("person2");
 		person2.setId(2);
@@ -33,7 +34,8 @@ public class App {
 		
 		System.out.println("Hello, my name is " + person2.getName() +
 				" and my address is " + person2.getAddress().getStreet() + " " + 
-				person2.getAddress().getZipcode());
+				person2.getAddress().getZipcode() +
+				" and I was created with PoJo constructor");
 		
 		// Prevents resource leaks
 		((ClassPathXmlApplicationContext)context).close();
