@@ -17,7 +17,9 @@ public class Main {
         basicBurger.addItem(new AdditionalItem("bacon", baconPrice));
         basicBurger.addItem(new AdditionalItem("mushrooms", mushroomsPrice));
 
-        System.out.println("Here's your " + basicBurger.getName());
+        System.out.println("Here's your " + basicBurger.getName() + " on " +
+        basicBurger.getBread() + " with " + 
+        		basicBurger.items.toString());
         
 //        System.out.println(basicBurger.getOrder() + "\nTotal price is $" +
 //        basicBurger.getTotal());
